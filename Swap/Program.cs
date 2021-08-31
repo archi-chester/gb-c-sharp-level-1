@@ -1,4 +1,14 @@
-﻿using System;
+﻿//  Автор - Горбачев Антон aka Archi Chester
+//  Email: me@qz0.ru
+
+//  С-Sharp 1
+//  Урок 1
+//  Задача 4
+//  Написать программу обмена значениями двух переменных:
+//  а) с использованием третьей переменной;
+//  б) *без использования третьей переменной.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
