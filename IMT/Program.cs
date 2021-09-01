@@ -24,7 +24,7 @@ namespace IMT
             int weight = (int) Int32.Parse(Console.ReadLine());
             
             Console.WriteLine("Введите рост: ");
-            int height = (int) Int32.Parse(Console.ReadLine());
+            float height = (float) float.Parse(Console.ReadLine());
             
 
 
@@ -42,7 +42,7 @@ namespace IMT
             Console.ReadKey();
         }
 
-        static float getIMT(int weight, int height)
+        static float getIMT(int weight, float height)
         {
             //  проверяем, что ввели, если там нули выдаем ошибку
             if (height <= 0)
