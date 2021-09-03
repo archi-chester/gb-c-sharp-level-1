@@ -20,7 +20,7 @@ namespace GoodDigits
         {
 
             //  запускаем паузу
-            AmountOfDigits.Utils.Pause();
+            GoodDigits.Utils.Pause();
         }
     }
 
