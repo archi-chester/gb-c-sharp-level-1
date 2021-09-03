@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E21C635-EADB-405F-89EA-68598894E794}</ProjectGuid>
+    <ProjectGuid>{0B9855ED-768A-41F1-B258-5831226D59D1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IMT</RootNamespace>
-    <AssemblyName>IMT</AssemblyName>
+    <RootNamespace>AmountOfDigits</RootNamespace>
+    <AssemblyName>AmountOfDigits</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

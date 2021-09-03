@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5DB07660-AE0A-43F3-A549-B146B2B419D5}</ProjectGuid>
+    <ProjectGuid>{9505ABFE-EFE8-4FB3-BE58-49B0BEB4571C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>form</RootNamespace>
-    <AssemblyName>form</AssemblyName>
+    <RootNamespace>GoodDigits</RootNamespace>
+    <AssemblyName>GoodDigits</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
