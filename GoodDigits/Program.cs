@@ -18,9 +18,49 @@ namespace GoodDigits
     {
         static void Main(string[] args)
         {
+            //  старт таймера
+            DateTime start = DateTime.Now;
+
+            //  преамбула
+            Console.WriteLine("Хорошие числа:");
+
+            //  перебираем числа
+            for (int i=1; i <= 1_000_000; i++)
+            {
+                //  если остаток от деления - ноль - выводим на печать
+                if (i % GetSumOfDigits(i) == 0)
+                {
+                    Console.Write($"{i} ");
+                }
+            }
+            //  конец таймера таймера
+            DateTime finish = DateTime.Now;
+
+            //  вывод результата
+            Console.WriteLine($"\nВремя работы: {finish - start}") ;
 
             //  запускаем паузу
             GoodDigits.Utils.Pause();
+        }
+
+        static int GetSumOfDigits(int number)
+        {
+            //  начальная сумма
+            int sum = 0;
+
+            //  перегоняем в строку
+            string strNumber = number.ToString();
+
+            //  перегоняем в массив символов
+            char[] arrayOfChars = strNumber.ToCharArray();
+
+            //  перебираем символы массива перегоняя в числа и суммируя
+            foreach(char symbol in arrayOfChars)
+            {
+                sum += Int32.Parse(Char.ToString(symbol));
+            }
+
+            return sum;
         }
     }
 
