@@ -18,9 +18,48 @@ namespace MinFromABC
     {
         static void Main(string[] args)
         {
+            //  ввод трех чисел
+            //  A
+            Console.WriteLine("Введите A: ");
+            int a = Int32.Parse(Console.ReadLine());
+
+            //  B
+            Console.WriteLine("Введите B: ");
+            int b = Int32.Parse(Console.ReadLine());
+
+            //  C
+            Console.WriteLine("Введите C: ");
+            int c = Int32.Parse(Console.ReadLine());
+
+            //  проверяем
+            if (a < b)
+            {
+                if (a < c)
+                {
+                    //  print a
+                    Console.WriteLine($"Наименьшее: {a}");
+                } else
+                {
+                    //  print c
+                    Console.WriteLine($"Наименьшее: {c}");
+                }
+            } else
+            {
+                if (b < c)
+                {
+                    //  print b
+                    Console.WriteLine($"Наименьшее: {b}");
+                } else
+                {
+                    //  print c
+                    Console.WriteLine($"Наименьшее: {c}");
+                }
+
+            }
+
 
             //  запускаем паузу
-            AmountOfDigits.Utils.Pause();
+            MinFromABC.Utils.Pause();
         }
     }
 
