@@ -31,31 +31,34 @@ namespace MinFromABC
             Console.WriteLine("Введите C: ");
             int c = Int32.Parse(Console.ReadLine());
 
-            //  проверяем
-            if (a < b)
-            {
-                if (a < c)
-                {
-                    //  print a
-                    Console.WriteLine($"Наименьшее: {a}");
-                } else
-                {
-                    //  print c
-                    Console.WriteLine($"Наименьшее: {c}");
-                }
-            } else
-            {
-                if (b < c)
-                {
-                    //  print b
-                    Console.WriteLine($"Наименьшее: {b}");
-                } else
-                {
-                    //  print c
-                    Console.WriteLine($"Наименьшее: {c}");
-                }
+            //int max;
 
-            }
+            //  проверяем
+            //if (a < b)
+            //{
+            //    if (a < c)
+            //    {
+            //        //  print a
+            //        Console.WriteLine($"Наименьшее: {a}");
+            //    } else
+            //    {
+            //        //  print c
+            //        Console.WriteLine($"Наименьшее: {c}");
+            //    }
+            //} else
+            //{
+            //    if (b < c)
+            //    {
+            //        //  print b
+            //        Console.WriteLine($"Наименьшее: {b}");
+            //    } else
+            //    {
+            //        //  print c
+            //        Console.WriteLine($"Наименьшее: {c}");
+            //    }
+            //}
+
+            Console.WriteLine($"Наименьшее: {(a < b ? (a < c ? a : c) : (b < c ? b : c))}");
 
 
             //  запускаем паузу
