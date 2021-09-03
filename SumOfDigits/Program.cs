@@ -15,13 +15,13 @@ using System.Threading.Tasks;
 
 namespace SumOfDigits
 {
-    class Program
+     public class Program
     {
         //  переменные
         //static int endDigit = 1_000_000;
         static int sum = 0;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             //  ввод чисел

@@ -14,9 +14,9 @@ using System.Threading.Tasks;
 
 namespace GoodDigits
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //  старт таймера
             DateTime start = DateTime.Now;
