@@ -23,18 +23,18 @@ namespace TaskMenu
                 //  меню
                 Console.WriteLine("\n\nMENU:");
                 Console.WriteLine("========================================");
-                Console.WriteLine("1. AmountOfDigits");
-                Console.WriteLine("2. GoodDigits");
+                Console.WriteLine("1. TryParseDigits");
+                Console.WriteLine("2. Fraction");
                 Console.WriteLine("0. Выход");
 
                 //  выбор
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        AmountOfDigits.Program.Main(args);
+                        TryParseDigits.Program.Main(args);
                         break;
                     case "2":
-                        GoodDigits.Program.Main(args);
+                       Fraction.Program.Main(args);
                         break;
                     case "0":
                         return;

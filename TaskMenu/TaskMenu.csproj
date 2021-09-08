@@ -51,9 +51,13 @@
     <None Include="README.MD" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{e58f3137-c5f9-4f3d-9b14-f4640083e900}</Project>
-      <Name>Utils</Name>
+    <ProjectReference Include="..\Fraction\Fraction.csproj">
+      <Project>{2fd0cb4a-9f64-4f74-86a0-c210f479dbf9}</Project>
+      <Name>Fraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TryParseDigits\TryParseDigits.csproj">
+      <Project>{38a75828-2fcf-49ca-b59e-5a4a92431f76}</Project>
+      <Name>TryParseDigits</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
