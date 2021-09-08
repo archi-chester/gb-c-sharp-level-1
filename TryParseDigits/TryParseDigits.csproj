@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5DB07660-AE0A-43F3-A549-B146B2B419D5}</ProjectGuid>
+    <ProjectGuid>{38A75828-2FCF-49CA-B59E-5A4A92431F76}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>form</RootNamespace>
-    <AssemblyName>form</AssemblyName>
+    <RootNamespace>TryParseDigits</RootNamespace>
+    <AssemblyName>TryParseDigits</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="README.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{e58f3137-c5f9-4f3d-9b14-f4640083e900}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

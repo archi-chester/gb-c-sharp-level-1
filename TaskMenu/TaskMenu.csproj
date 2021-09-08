@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E21C635-EADB-405F-89EA-68598894E794}</ProjectGuid>
+    <ProjectGuid>{A9BAB900-2B10-4791-B683-F16BD758CB45}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IMT</RootNamespace>
-    <AssemblyName>IMT</AssemblyName>
+    <RootNamespace>TaskMenu</RootNamespace>
+    <AssemblyName>TaskMenu</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="README.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{e58f3137-c5f9-4f3d-9b14-f4640083e900}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

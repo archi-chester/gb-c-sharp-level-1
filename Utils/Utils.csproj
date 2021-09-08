@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF002805-23AA-4B70-8735-07260702ACE9}</ProjectGuid>
+    <ProjectGuid>{E58F3137-C5F9-4F3D-9B14-F4640083E900}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Swap</RootNamespace>
-    <AssemblyName>Swap</AssemblyName>
+    <RootNamespace>Utils</RootNamespace>
+    <AssemblyName>Utils</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="README.MD" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
