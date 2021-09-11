@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9BAB900-2B10-4791-B683-F16BD758CB45}</ProjectGuid>
+    <ProjectGuid>{BB026AF3-4A0E-445B-8F3F-B6594CEA5D50}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TaskMenu</RootNamespace>
-    <AssemblyName>TaskMenu</AssemblyName>
+    <RootNamespace>FindAndPrintPair</RootNamespace>
+    <AssemblyName>FindAndPrintPair</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,16 +49,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="README.MD" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\2dArrayApp\2dArrayApp.csproj">
-      <Project>{08142fc8-a777-4de1-88d0-9925e7c2d8ce}</Project>
-      <Name>2dArrayApp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FindAndPrintPair\FindAndPrintPair.csproj">
-      <Project>{bb026af3-4a0e-445b-8f3f-b6594cea5d50}</Project>
-      <Name>FindAndPrintPair</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

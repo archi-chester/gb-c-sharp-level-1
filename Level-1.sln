@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2dArrayLib", "2dArrayLib\2d
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2dArrayApp", "2dArrayApp\2dArrayApp.csproj", "{08142FC8-A777-4DE1-88D0-9925E7C2D8CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAndPrintPair", "FindAndPrintPair\FindAndPrintPair.csproj", "{BB026AF3-4A0E-445B-8F3F-B6594CEA5D50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{08142FC8-A777-4DE1-88D0-9925E7C2D8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08142FC8-A777-4DE1-88D0-9925E7C2D8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08142FC8-A777-4DE1-88D0-9925E7C2D8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB026AF3-4A0E-445B-8F3F-B6594CEA5D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB026AF3-4A0E-445B-8F3F-B6594CEA5D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB026AF3-4A0E-445B-8F3F-B6594CEA5D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB026AF3-4A0E-445B-8F3F-B6594CEA5D50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
