@@ -19,6 +19,14 @@ namespace _2dArrayApp
     {
         public static void Main(string[] args)
         {
+
+            //  Массив из файла
+            DoubleDimensionArray ddArrayFile = new DoubleDimensionArray("data.txt");
+
+            //  Печать массива
+            Console.WriteLine($"Печатаем массив: \n {ddArrayFile}");
+
+            //  Массив с консоли
             int x;
             int y;
 
@@ -35,7 +43,7 @@ namespace _2dArrayApp
                 Console.WriteLine("Неверный ввод, введите параметр Y двумерного массива снова:");
             };
 
-            DoubleDimensionArray ddArray = new DoubleDimensionArray(x, y, false);
+            DoubleDimensionArray ddArray = new DoubleDimensionArray(x, y);
 
             //  Печать массива
             Console.WriteLine($"Печатаем массив: \n {ddArray}");
@@ -65,6 +73,15 @@ namespace _2dArrayApp
             Console.WriteLine($"Индекс максимального: строка {indexI}, столбец {indexJ}\n");
 
             //  Работа с файлами
+
+            //  Сохраняем файл
+            ddArray.saveToFS("data.txt");
+
+            //  Загружаем файл
+            ddArray.loadFromFS("data.txt");
+
+            // Снова печать
+            Console.WriteLine($"Массив:\n {ddArray}");
 
 
         }

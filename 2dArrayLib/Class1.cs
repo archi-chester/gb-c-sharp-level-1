@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 //  Автор - Горбачев Антон aka Archi Chester
 //  Email: me@qz0.ru
@@ -82,32 +83,38 @@ namespace _2dArrayLib
         /// <param name="firstDimension"></param>
         /// <param name="secondDimension"></param>
         /// <param name="usingFS"></param>
-        public DoubleDimensionArray(int firstDimension, int secondDimension, bool usingFS)
+        public DoubleDimensionArray(int firstDimension, int secondDimension)
         {
-            if (usingFS)
-            //  если с файлом
-            {
-                //  бит работы с ФС
-                this._isUsingFS = true;
+            //  если без файла
+            this._doubleDiArray = new int[firstDimension, secondDimension];
 
+            //  заполняем случайными значениями
+            Random rnd = new Random();
+            for (int i = 0; i < firstDimension; i++)
+            {
+                for (int j = 0; j < secondDimension; j++)
+                {
+                    this._doubleDiArray[i, j] = rnd.Next(-99, 100);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Конструктор без записи в файл
+        /// </summary>
+        /// <param name="usingFS"></param>
+        public DoubleDimensionArray(string fileName)
+        {
+            //  проверка наличия файла
+            if(File.Exists(AppDomain.CurrentDomain.BaseDirectory + fileName))
+            {
                 //  загрузка файла с винта
-                this.loadFromFS();
+                this.loadFromFS("data.txt");
             }
             else
             {
-                //  если без файла
-                this._doubleDiArray = new int[firstDimension, secondDimension];
-
-                //  заполняем случайными значениями
-                Random rnd = new Random();
-                for (int i = 0; i < firstDimension; i++)
-                {
-                    for (int j = 0; j < secondDimension; j++)
-                    {
-                        Console.WriteLine($"{i}, {j}");
-                        this._doubleDiArray[i, j] = rnd.Next(-99, 100);
-                    }
-                }
+                //  кидаем исключение
+                throw new FileNotFoundException();
             }
         }
 
@@ -197,17 +204,78 @@ namespace _2dArrayLib
         /// <summary>
         /// Загрузка массива с диска
         /// </summary>
-        public void loadFromFS()
+        public void loadFromFS(string fileName)
         {
 
-        }
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + fileName))
+            {
+
+                Console.WriteLine($"Открываю файл {AppDomain.CurrentDomain.BaseDirectory}{fileName}");
+                int iLength = 0;
+                int jLength = 0;
+                //Создаем объект sw и связываем его с файлом fileName.
+                using (StreamReader srTemp = new StreamReader($"{AppDomain.CurrentDomain.BaseDirectory}{fileName}"))
+                {
+                    while(!srTemp.EndOfStream)
+                    {
+                        iLength++;
+                        jLength = srTemp.ReadLine().Split('\t').Length;
+                    }
+                }
+
+                this._doubleDiArray = new int[iLength, jLength];
+
+                //Создаем объект sw и связываем его с файлом fileName.
+                using (StreamReader sr = new StreamReader($"{AppDomain.CurrentDomain.BaseDirectory}{fileName}"))
+                {
+                    for (int i = 0; !sr.EndOfStream; i++)
+                    {
+                        string row = sr.ReadLine();
+                        string[] arrayRow = row.Split('\t');
+                        for (int j = 0; j < arrayRow.Length; j++)
+                        {
+                            this._doubleDiArray[i, j] = int.Parse(arrayRow[j]);
+                        }
+                    }
+                }
+
+                Console.WriteLine($"Загружен массив: \n {this}");
+            }
+            else
+            {
+                throw new FileNotFoundException();
+            }
+        }    
         
         /// <summary>
         /// Сохранение массива на диск
         /// </summary>
-        public void saveToFS()
+        public void saveToFS(string fileName)
         {
+            //Console.WriteLine($"{AppDomain.CurrentDomain.BaseDirectory}{fileName}");
+            //Создаем объект sw и связываем его с файлом fileName.
+            using (StreamWriter sw = new StreamWriter($"{AppDomain.CurrentDomain.BaseDirectory}{fileName}"))
+            {
+                for (int i = 0; i < this.DoubleDiArray.GetLength(0); i++)
+                {
+                    string row = "";
+                    for (int j = 0; j < this.DoubleDiArray.GetLength(1); j++)
+                    {
+                        if (j == 0)
+                        {
+                            row = $"{this._doubleDiArray[i, j]}";
+                        }
+                        else
+                        {
+                            row = row + $"\t{this._doubleDiArray[i, j]}";
+                        }
+                    }
+                    //  пишем строку
+                    sw.WriteLine(row);
+                }
+            }
 
+            Console.WriteLine($"Массив сохранен в {AppDomain.CurrentDomain.BaseDirectory}{fileName}");
         }
     }
 }
