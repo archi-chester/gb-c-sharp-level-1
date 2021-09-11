@@ -36,6 +36,7 @@ namespace Fraction
             Console.WriteLine($"{f1} - {f2} = {f1 - f2}");
             Console.WriteLine($"{f1} * {f2} = {f1 * f2}");
             Console.WriteLine($"{f1} / {f2} = {f1 / f2}");
+            Console.WriteLine($"Десятичная дробь числом: {f1.DecimalFraction}, {f2.DecimalFraction}");
 
             //  пауза перед выходом
             Utils.Program.Pause();

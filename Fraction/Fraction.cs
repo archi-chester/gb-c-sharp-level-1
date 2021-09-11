@@ -15,7 +15,6 @@ namespace Fraction
         /// числитель дроби
         /// </summary>
         private int _numerator;
-
         public int Numerator
         {
             get
@@ -50,6 +49,17 @@ namespace Fraction
                 {
                     this._denominator = value;
                 };
+            }
+        }
+
+        /// <summary>
+        /// Десятичная дробь числом
+        /// </summary>
+        public double DecimalFraction
+        { 
+            get
+            {
+                return (double)this.Numerator / (double)this.Denominator;
             }
         }
 
