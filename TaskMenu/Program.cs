@@ -2,7 +2,7 @@
 //  Email: me@qz0.ru
 
 //  С# 1
-//  Урок 3
+//  Урок 4
 //  Меню
 using System;
 using System.Collections.Generic;
@@ -24,17 +24,17 @@ namespace TaskMenu
                 Console.WriteLine("\n\nMENU:");
                 Console.WriteLine("========================================");
                 Console.WriteLine("1. TryParseDigits");
-                Console.WriteLine("2. Fraction");
+                Console.WriteLine("2. doubleDiArrayApp");
                 Console.WriteLine("0. Выход");
 
                 //  выбор
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        TryParseDigits.Program.Main(args);
+                        //TryParseDigits.Program.Main(args);
                         break;
                     case "2":
-                       Fraction.Program.Main(args);
+                       _2dArrayApp.Program.Main(args);
                         break;
                     case "0":
                         return;

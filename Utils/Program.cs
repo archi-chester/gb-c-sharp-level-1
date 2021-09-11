@@ -2,7 +2,7 @@
 //  Email: me@qz0.ru
 
 //  С# 1
-//  Урок 3
+//  Урок 4
 //  Служебный класс
 using System;
 using System.Collections.Generic;
