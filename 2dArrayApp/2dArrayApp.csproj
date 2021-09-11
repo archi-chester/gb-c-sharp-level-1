@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5DB07660-AE0A-43F3-A549-B146B2B419D5}</ProjectGuid>
+    <ProjectGuid>{08142FC8-A777-4DE1-88D0-9925E7C2D8CE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>form</RootNamespace>
-    <AssemblyName>form</AssemblyName>
+    <RootNamespace>_2dArrayApp</RootNamespace>
+    <AssemblyName>2dArrayApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="README.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2dArrayLib\2dArrayLib.csproj">
+      <Project>{f99b9820-4e32-4b0d-9bad-f160e24cd9c4}</Project>
+      <Name>2dArrayLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
