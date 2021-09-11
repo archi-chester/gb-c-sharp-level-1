@@ -18,13 +18,29 @@ using System.Threading.Tasks;
 
 namespace Fraction
 {
+
+    /// <summary>
+    /// Демо программа для класса работы с простой дробью
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
         {
 
+            Fraction f1 = Fraction.CreateFraction();
+            Fraction f2 = Fraction.CreateFraction();
+            //Fraction f1 = new Fraction(2, 5);
+            //Fraction f2 = new Fraction(3, 6);
+
+            Console.WriteLine($"{f1} + {f2} = {f1 + f2}");
+            Console.WriteLine($"{f1} - {f2} = {f1 - f2}");
+            Console.WriteLine($"{f1} * {f2} = {f1 * f2}");
+            Console.WriteLine($"{f1} / {f2} = {f1 / f2}");
+
             //  пауза перед выходом
             Utils.Program.Pause();
         }
     }
+
+
 }
