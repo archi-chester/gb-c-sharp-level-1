@@ -23,7 +23,7 @@ namespace TaskMenu
                 //  меню
                 Console.WriteLine("\n\nMENU:");
                 Console.WriteLine("========================================");
-                Console.WriteLine("1. TryParseDigits");
+                Console.WriteLine("1. FindAndPrintPair");
                 Console.WriteLine("2. doubleDiArrayApp");
                 Console.WriteLine("0. Выход");
 
@@ -31,7 +31,7 @@ namespace TaskMenu
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        //TryParseDigits.Program.Main(args);
+                        FindAndPrintPair.Program.Main(args);
                         break;
                     case "2":
                        _2dArrayApp.Program.Main(args);
