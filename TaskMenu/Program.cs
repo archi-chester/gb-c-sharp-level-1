@@ -2,7 +2,7 @@
 //  Email: me@qz0.ru
 
 //  С# 1
-//  Урок 4
+//  Урок 5
 //  Меню
 using System;
 using System.Collections.Generic;
@@ -31,10 +31,10 @@ namespace TaskMenu
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        FindAndPrintPair.Program.Main(args);
+                        //FindAndPrintPair.Program.Main(args);
                         break;
                     case "2":
-                       _2dArrayApp.Program.Main(args);
+                       //_2dArrayApp.Program.Main(args);
                         break;
                     case "0":
                         return;
