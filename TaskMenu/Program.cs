@@ -32,7 +32,7 @@ namespace TaskMenu
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        //FindAndPrintPair.Program.Main(args);
+                        SignIn.Logon.Main();
                         break;
                     case "2":
                         //_2dArrayApp.Program.Main(args);
