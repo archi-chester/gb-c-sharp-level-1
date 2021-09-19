@@ -4,6 +4,7 @@
 //  С# 1
 //  Урок 5
 //  Меню
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace TaskMenu
                 //  меню
                 Console.WriteLine("\n\nMENU:");
                 Console.WriteLine("========================================");
-                Console.WriteLine("1. FindAndPrintPair");
+                Console.WriteLine("1. SignIn");
                 Console.WriteLine("2. doubleDiArrayApp");
                 Console.WriteLine("0. Выход");
 
@@ -34,7 +35,7 @@ namespace TaskMenu
                         //FindAndPrintPair.Program.Main(args);
                         break;
                     case "2":
-                       //_2dArrayApp.Program.Main(args);
+                        //_2dArrayApp.Program.Main(args);
                         break;
                     case "0":
                         return;

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{492B8949-DB4D-4B96-8797-F17DC6C1510D}</ProjectGuid>
+    <ProjectGuid>{EC985A85-E90E-455A-A8D2-A89502AA4108}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>SignIn</RootNamespace>
     <AssemblyName>SignIn</AssemblyName>
@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{9fa9e888-5bd3-420d-877d-e2814a3b382b}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
