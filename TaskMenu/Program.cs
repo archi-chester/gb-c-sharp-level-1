@@ -25,7 +25,7 @@ namespace TaskMenu
                 Console.WriteLine("\n\nMENU:");
                 Console.WriteLine("========================================");
                 Console.WriteLine("1. DoubleDelegate");
-                Console.WriteLine("2. Message");
+                Console.WriteLine("2. MinimumThrowDelegate");
                 Console.WriteLine("0. Выход");
 
                 //  выбор
