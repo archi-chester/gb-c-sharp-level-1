@@ -2,7 +2,7 @@
 //  Email: me@qz0.ru
 
 //  С# 1
-//  Урок 5
+//  Урок 6
 //  Меню
 
 using System;
@@ -24,7 +24,7 @@ namespace TaskMenu
                 //  меню
                 Console.WriteLine("\n\nMENU:");
                 Console.WriteLine("========================================");
-                Console.WriteLine("1. SignIn");
+                Console.WriteLine("1. DoubleDelegate");
                 Console.WriteLine("2. Message");
                 Console.WriteLine("0. Выход");
 
@@ -32,10 +32,10 @@ namespace TaskMenu
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        SignIn.Logon.Main();
+                        DoubleDelegate.Program.Main();
                         break;
                     case "2":
-                        Message.Message.Demo();
+                        MinimumThrowDelegate.Program.Main();
                         break;
                     case "0":
                         return;
