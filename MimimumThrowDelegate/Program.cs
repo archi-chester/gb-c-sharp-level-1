@@ -65,12 +65,14 @@ namespace MinimumThrowDelegate
         private static void _do(delegatedF F)
         {
             //  переменные
-            double lowRange = -100;
-            double highRange = 100;
-            double step = 0.5;
+            double lowRange = Utils.ConsoleUtils.InputNumberDouble("lowRange");
+            double highRange = Utils.ConsoleUtils.InputNumberDouble("highRange");
+            double step = Utils.ConsoleUtils.InputNumberDouble("Step");
 
+            //  сохраняем данные
             SaveFunc("data.bin", lowRange, highRange, step, F);
 
+            //  печать минимума
             double minimum;
             Console.WriteLine($"Data:");
             Console.WriteLine(String.Join(" ", Load("data.bin", out minimum)));
@@ -126,19 +128,25 @@ namespace MinimumThrowDelegate
         //  загрузка из файла
         public static double[] Load(string fileName, out double minimum)
         {
+            //  открываем потоки
             FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             BinaryReader bw = new BinaryReader(fs);
-            double min = double.MaxValue;
+
+            //  переменные
             minimum = double.MaxValue;
-            double d;
+
+            //  промежуточный массив
             double[] arrays = new double[(fs.Length / sizeof(double))];
+
+            //  перебор из потока
             for (int i = 0; i < fs.Length / sizeof(double); i++)
             {
                 // Считываем значение и переходим к следующему
-                d = bw.ReadDouble();
-                arrays[i] = d;
-                if (d < minimum) minimum = d;
+                arrays[i] = bw.ReadDouble(); ;
+                if (arrays[i] < minimum) minimum = arrays[i];
             }
+
+            //  закрываем потоки
             bw.Close();
             fs.Close();
             return arrays;
