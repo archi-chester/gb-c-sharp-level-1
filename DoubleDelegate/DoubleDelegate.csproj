@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9E23EF07-B41A-4E34-BBB4-C1604EECDE62}</ProjectGuid>
+    <ProjectGuid>{258B1CD3-B22F-4BFD-A083-950618949683}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TaskMenu</RootNamespace>
-    <AssemblyName>TaskMenu</AssemblyName>
+    <RootNamespace>DoubleDelegate</RootNamespace>
+    <AssemblyName>DoubleDelegate</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,14 +51,6 @@
     <None Include="README.MD" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DoubleDelegate\DoubleDelegate.csproj">
-      <Project>{258b1cd3-b22f-4bfd-a083-950618949683}</Project>
-      <Name>DoubleDelegate</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MimimumThrowDelegate\MinimumThrowDelegate.csproj">
-      <Project>{df66aa77-0494-418c-8c47-bac86eb1ea5c}</Project>
-      <Name>MinimumThrowDelegate</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{4cffc9d9-07cc-444f-bc14-9dfcfffad5cf}</Project>
       <Name>Utils</Name>
