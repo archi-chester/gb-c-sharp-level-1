@@ -20,6 +20,7 @@ namespace Doubler
         #region Private Values
         //  private
         private int _maxClicks;
+
         private int _guessedNumber;
 
         private int _Count
@@ -49,6 +50,22 @@ namespace Doubler
             }
 
         }
+
+        private bool _GameState
+        {
+            get
+            {
+                return this.lblStatus.Visible;
+            }
+
+            set
+            {
+                this.lblStatus.Visible = value;
+            }
+
+        }
+
+        private Stack<GameStatus> _gameStack = new Stack<GameStatus>();
         #endregion
 
         /// <summary>
@@ -62,6 +79,7 @@ namespace Doubler
             this.btnCommand1.Text = "+1";
             this.btnCommand2.Text = "x2";
             this.btnReset.Text = "Сброс";
+            this.btnUndo.Text = "Undo";
             this.lblNumber.Text = "0";
             this.lblCount.Text = "0";
             this.Text = "Удвоитель";
@@ -76,6 +94,12 @@ namespace Doubler
         /// <param name="e"></param>
         private void btnCommand1_Click(object sender, EventArgs e)
         {
+            //  показать кнопку отмены
+            this._showUndo();
+
+            //  сохраняем статус в стек
+            this._gameStack.Push(new GameStatus(this._maxClicks, this._guessedNumber, this._Count, this._Clicks, this._GameState));
+
             //  увеличили на единицу
             this._Count = this._Count + 1;
 
@@ -94,6 +118,11 @@ namespace Doubler
         /// <param name="e"></param>
         private void btnCommand2_Click(object sender, EventArgs e)
         {
+            //  показать кнопку отмены
+            this._showUndo();
+
+            //  сохраняем статус в стек
+            this._gameStack.Push(new GameStatus(this._maxClicks, this._guessedNumber, this._Count, this._Clicks, this._GameState));
 
             //  умножили на 2
             this._Count = this._Count * 2;
@@ -113,6 +142,13 @@ namespace Doubler
         /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
+            //  показать кнопку отмены
+            this._showUndo();
+
+            //  сохраняем статус в стек
+            this._gameStack.Push(new GameStatus(this._maxClicks, this._guessedNumber, this._Count, this._Clicks, this._GameState));
+
+            //  all reset
             this._resetAll();
         }
 
@@ -123,6 +159,12 @@ namespace Doubler
         /// <param name="e"></param>
         private void gameToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //  показать кнопку отмены
+            this._showUndo();
+
+            //  сохраняем статус в стек
+            this._gameStack.Push(new GameStatus(this._maxClicks, this._guessedNumber, this._Count, this._Clicks, this._GameState));
+
             //  генерируем новое число для угадывания
             Random rnd = new Random();
             this._guessedNumber = (int) rnd.Next(1, 99);
@@ -224,5 +266,66 @@ namespace Doubler
             //  прячем статус игры  
             this.lblStatus.Visible = false;
         }
+
+        /// <summary>
+        /// Операция отмены
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+
+            //  загружаем статус из стека
+            GameStatus status = this._gameStack.Pop();
+
+            //  приравняли к единице
+            this._Count = status.count;
+
+            //  увеличили клик
+            this._Clicks = status.clicks;
+
+            //  ограничение по кликам
+            this._maxClicks = status.maxClicks;
+
+            //  загаданное число
+            this._guessedNumber = status.guessedNumber;
+
+            //  прячем статус игры  
+            this.lblStatus.Visible = status.gameState;
+
+            //  прячем кнопку если стек пустой
+            this.btnUndo.Visible = this._gameStack.Count > 0 ? true : false;
+        }
+
+        private void _showUndo()
+        {
+            if (this.btnUndo.Visible != true)
+                this.btnUndo.Visible = true;
+        }
+    }
+
+    //  структура для стека
+    public class GameStatus
+    {
+        //  переменные
+        public int maxClicks;
+        public int guessedNumber;
+        public int count;
+        public int clicks;
+        public bool gameState;
+
+        public GameStatus() 
+        {
+        }
+
+        public GameStatus(int maxClicks, int guessedNumber, int count, int clicks, bool gameState)
+        {
+            this.guessedNumber = guessedNumber;
+            this.count = count;
+            this.clicks = clicks;
+            this.maxClicks = maxClicks;
+            this.gameState = gameState;
+        }
     }
 }
+
