@@ -1,7 +1,7 @@
 ﻿
 namespace TryNumber
 {
-    partial class Form1
+    partial class FrmGame
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,33 @@ namespace TryNumber
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStart = new System.Windows.Forms.Button();
+            this.ctrlUserInput1 = new TryNumber.ctrlUserInput();
             this.SuspendLayout();
             // 
-            // btnStart
+            // ctrlUserInput1
             // 
-            this.btnStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStart.Location = new System.Drawing.Point(0, 0);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(217, 87);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Начать";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.ctrlUserInput1.Location = new System.Drawing.Point(29, 12);
+            this.ctrlUserInput1.Name = "ctrlUserInput1";
+            this.ctrlUserInput1.Size = new System.Drawing.Size(178, 101);
+            this.ctrlUserInput1.TabIndex = 0;
+            this.ctrlUserInput1.Load += new System.EventHandler(this.ctrlUserInput1_Load);
             // 
-            // Form1
+            // FrmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 87);
-            this.Controls.Add(this.btnStart);
-            this.Name = "Form1";
-            this.Text = "Угадай число";
+            this.ClientSize = new System.Drawing.Size(233, 113);
+            this.Controls.Add(this.ctrlUserInput1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FrmGame";
+            this.Text = "Попробуй угадать число";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnStart;
+        private ctrlUserInput ctrlUserInput1;
     }
 }
-
